@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-art</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-e-art.png">
+</head>
+<body>
+    
+    <div class="login" id="login">
+        <div class="overlay-login"></div>
+        <div class="login-content">
+            <img class="login-img" src="./assets/images/icone/icone1.png"> 
+            <form method="post">
+                <input type="email" placeholder="Usuário ou e-mail" name="username" required>
+                <input type="password" placeholder="Senha" name="password" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <div class="additional-content">
+                <span class="forgot-password">Esqueceu sua <a href="#">senha?</a></span>
+                <button type="button" class="cancel-btn"></button>
+            </div>
+        </div>
+    </div>
+    <div id="cookieConsentBanner">
+        <h4>Nós utilizamos cookies para melhorar sua experiência no site. Ao continuar, você aceita o uso de cookies.</h4>
+        <button class="cookie-button" onClick="aceitarCookies()">Permitir</button>
+</div>
+    <header>
+        <div class="header-img-bkg">
+            <img src="assets\images/banner da galeria.jpg">
+            <div class="text-img-bkg">
+                <h1>E-ART</h1>
+                <h2>SUA GALERIA DE ARTE DIGITAL</h2>
+            </div>
+        </div>
+        <nav>
+            <div class="navlogo">
+                <div class="linelogo">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </div>
+                <img src="assets/images/e-art/e-art.png">
+                
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#gallery-section">GALERIA</a></li>
+                    <li><a href="#about-nft-section">NFT</a></li>
+                    <li><button id="open-login">LOGIN</button></li>
+                </ul>
+                <input type="text" placeholder="Pesquisar obras">
+            </div>
+        </nav>
+        <div class="navline"></div>
+    </header>
+        <main>
+            <section id="carousel">
+                <h1>DESTAQUES DA SEMANA</h1>
+                <div class="carousel-container">
+                    <div class="car-img carousel-img-1"><img src="./assets/images/imagens/pagina 1 carrossel/img1.png" alt='Arte digital da personagem Princesa Mononoke do filme Mononoke Hime (1997). Ela possui cabelos lisos e uma franja. Seu rosto é pintado com símbolos ancestrais na cor vermelha. Ela, que também é conhecida como "Wolf Girl" no filme, faz uso de um chapéu de lobo. Por ter sido criada junto a eles, ela se vê como um lobo.'>
+                        <div class="carroussel-txt">
+                            <p class="nomearte">Arte 01</p>
+                            <p class="nomeartista">Artista 01</p>
+                        </div>
+                    </div>
+                    <div class="car-img carousel-img-2"><img src="./assets/images/imagens/pagina 1 carrossel/img2.png" alt="Arte digital psicodélica de uma mulher que está envolta no que parecer ser o seu cabelo, porém está repleto de flores nascendo dele. Podemos identificar em meio às flores as cores verde, amarelo, vermelho, azul e roxo.">
+                        <div class="carroussel-txt">
+                            <p class="nomearte">Arte 02</p>
+                            <p class="nomeartista">Artista 02</p>
+                        </div>
+                    </div>
+                    <div class="car-img carousel-img-3"><img src="./assets/images/imagens/pagina 1 carrossel/img3.png" alt="Arte digital com elementos surrealistas de uma mulher com um lenço, colorido em listras, tapando os seus olhos. As listras possuem as cores amarelo, azul ciano e rosa em tons pastel e neo n também. A imagem possui um fundo amarelo e a cabeça da mulher tem um contorno na cor preta.">
+                        <div class="carroussel-txt">
+                            <p class="nomearte">Arte 03</p>
+                            <p class="nomeartista">Artista 03</p>
+                        </div>
+                    </div>  
+                    <div class="car-img carousel-img-4"><img src="./assets/images/imagens/pagina 1 carrossel/img4.png" alt="Arte digital com características futurísticas de uma mulher em meio a alguns prédios. Ela possui uma armadura que lembra um traje de super herói nas cores cinza, azul e preto. Na sua cabeça, tem um capacete, ele é transparente na região do rosto. Podemos ver um ponto de luz no lugar onde seria a sua mão, dando a entender que ela está expelindo poderes dali. Na sua outra mão, podemos ver uma arma.">
+                        <div class="carroussel-txt">
+                            <p class="nomearte">Arte 04</p>
+                            <p class="nomeartista">Artista 04</p>
+                        </div>
+                    </div>
+                    <div class="car-img carousel-img-5"><img src="./assets/images/imagens/pagina 1 carrossel/img5.png" alt="Arte digital 2D de uma paisagem a céu aberto. Na imagem, podemos ver água, que poderia ser de um lago. Nela, vemos um barco ao longe com 4 pessoas, 2 adultos e 2 crianças. Eles parecem observar pirâmides gigantes mais ao longe na imagem. O céu está revestido por uma cor azul anil, que dá a entender que o dia está chegando ao fim, dando lugar à noite. Podemos ver, nas nuvens, reflexos na cor laranja, que indicam que o Sol está se pondo.">
+                        <div class="carroussel-txt">
+                            <p class="nomearte">Arte 05</p>
+                            <p class="nomeartista">Artista 05</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#gallery-section"><button type="submit" class="visumais-btn">VISUALIZAR MAIS</button></a>
+            </section>
+        </main>
+        <div class="pag2" id="about-nft-section">
+            <div class="about-nft">
+                <span class="title-about-nft">Um pouco de história...</span>
+                <div class="leftside-nft">
+                    <h2>Você sabe o que é um <b>NFT?</b></h2>
+                    <h3>‎ ‎ ‎É uma sigla “non-fungible token”, traduzido para o português: <b>token não-fungivel</b>. Em outras palavras um token no universo das criptomoedas é a representação de um ativo como dinheiro, propriedade ou obra de arte registrada em uma blockchain. Essa forma de negócio é recente, conquistou olhares no ano de 2014, através da obra de arte de <b>Kevin McCoy, Quantum</b>. De lá pra cá os NFT'S se tornaram verdadeiras tendências de colecionáveis no mercado de cripto! E é por essa razão que apresentaremos alguns artistas nesse modelo de arte digital!
+                        </h3>
+                </div>
+                <div class="rightside-nft">
+                    <img src="./assets/images/primeira nft.png">
+                    <div class="detail-img"></div>
+                    <div class="text-about-nft">
+                        <span class="title-about">Quantum. A primeira NFT</span>
+                        <span class="subtitle-about">Arte digital de Kevin McCoy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pag3">
+            <div class="pag3-gallery-padding">
+            <div class="gallery-block" id="gallery-section">
+                <div class="title-gallery">
+                    <span>GALERIA SUBTERRÂNEA
+
+                        <div class="title-gallery-block-color">
+                        <p>SUBTERRÂNEA</p>
+                        </div>
+                    </span>
+                </div>
+                <div class="gallery">
+                    <div class="gallery-grid">
+                        <div class="gallery-block-1" title="Arte digital toda trabalhada no estilo mosáico. Vemos uma paisagem desértica representada, com o sol centralizado ao fundo, montanhas, árvores e cactos, flores e um riacho correndo todo o ambiente."></div>
+
+                        <div class="gallery-block-2" title="Arte digital de uma pessoa indígena, com pinturas na região do rosto e pescoço, colares e cocar característicos. Está representada à frente de um aparelho de rádio, que possui uma tela vermelha."></div>
+
+                        <div class="gallery-block-3" title="Arte digital representando um trem seguindo seu trilho. Conseguimos identificar várias imagens em mosáico, em vários tamanhos. O que seria o céu e algumas montanhas ao fundo estão representados em mosáicos. O trem também, nas cores cinza prateado, laranja e vermelho. No chão, que está mais próximo na perspectiva do registro, conseguimos ver flores que lembram corais no mar. Elas possuem diversas cores. É uma imagem bem colorida.
+                        "></div>
+                        
+                        <div class="gallery-block-4" title="Arte digital com elementos de terror. Vemos um anjo sem rosto que transparece estar em agonia. O fundo da imagem é escuro."></div>
+
+                        <div class="gallery-block-5" title="Arte digital com características de colagem. Nela vemos vários elementos que parecem ter várias origens diferentes. Na parte de cima, vemos o que parece ser o céu cor de rosa, com uma núvem no centro. Um pouco abaixo na imagem, inserida nesse céu, surge uma esfera que reflete os elementos que estão no céu, porém, na cor azul, como se fosse uma lente azul. Seguindo, ainda sobre a esfera, surgem montanhas com uma cachoeira caindo dentre elas. A cachoeira se aproxima, na perspectiva da imagem, e chega ao seu fim dando lugar a imagens de flores coloridas, na ponta inferior da imagem."></div>
+
+                        <div class="gallery-block-6" title="Arte digital no estilo cartoon de um homem jovem, que parece estar observando o céu de cima de uma montanha. Conseguimos ver estrelas e nuvens nas cores roxa, azul e vermelha. Pela vestimenta e alguns outros elementos, como uma bolsa que ele carrega consigo, parece se tratar de um viajante.
+                        "></div>
+                        <div class="gallery-block-7" title="Arte digital que representa uma releitura de uma figura clássica, um homem de cabelos e barba longos e acizentados, indicando maior idade. Ele é representado na imagem com elementos modernos, que vão de encontro a sua época. Ele está diante de um aparelho de mixagem de som"></div>
+
+                        <div class="gallery-block-8" title="Arte digital com características cartunescas de uma menina sentada no topo de um carro antigo. Ela possui cabelos castanhos e está vestida com uma camisa xadrez bege e uma calça verde. Ela está acompanhada de um gato preto dos olhos amarelos. Ele também possui um detalhe em branco no seu queixo. As cores azul e laranja no céu indicam que o dia está chegando ao fim."></div>
+
+                        <div class="gallery-block-9" title="Arte digital de uma cidade ao longe. Conseguimos ver dois edifícios maiores no fundo da imagem. Na linha do meio, vários pontos de luz artificial, como se fosse um registro noturno da cidade. Mais próximo, em perspectiva, conseguimos identificar formas que indicam ser árvores."></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="footer-line"></div>
+            <footer>
+                <div class="leftinfo-footer">
+                    <a href="#">Contato</a>
+                        <a href="#">Sobre Nós</a>
+                </div>
+                <div class="rightinfo-footer">
+                    <span>Desenvolvido por: Eduardo Moreira, Lídia Alves, Quéren Jemima, Talita Tomaz</span>
+                </div>
+            </footer>
+        </div> <!-- pag3  -->
+        <script src="assets\js\javascript.js"></script>
+        <!--------------------Acessibilidade Vlibras------------------------------------------>
+ <div vw class="enabled">
+    <div vw-access-button class='active'></div>
+        <div vw-plugin-wrapper>
+           <div class="vw-plugin-top-wrapper"></div>
+           </div>
+   </div>
+   <script src='https://vlibras.gov.br/app/vlibras-plugin.js'></script>
+   <script>
+   new window.VLibras.Widget({
+   rootPah: '/app',
+   personalization: 'https://vlibras.gov.br/config/default_logo.json',
+    opacity: 0.5,
+    position: 'R',
+    avatar: 'random',
+    });
+    
+   </script>
+        
+</body>
+</html>

@@ -1,0 +1,753 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+}
+a:link {
+  text-decoration: none;
+  color:#191919;
+}
+
+a:visited {
+  text-decoration: none;
+  color:#191919;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+#cookieConsentBanner {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px #1919199d;
+    padding: 15px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: 30%;
+    text-align: center;
+    display: none;
+    z-index: 4;
+}
+
+#cookieConsentBanner h4{
+    color: #191919;
+    font-size: 19px;
+    font-weight: 100;
+}
+
+.cookie-button{
+    margin-top: 10px;
+    border: 0;
+    background-color: #EC3281;
+    padding: 5px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+}
+
+.cookie-button:hover{
+    background-color: #242040;
+}
+
+header{
+    height: 290px;
+    /* background-color: blue; */
+}
+
+.header-img-bkg{
+    position: relative;
+    background-color: rgb(49, 50, 65);
+    height:180px;
+}
+
+.header-img-bkg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.header-img-bkg .text-img-bkg{
+    position:absolute;
+    display:block;
+    top: 30%;
+    color: #f1f1f1;
+    opacity: 0.90;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.text-img-bkg h1{
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 20px;
+    padding-bottom: 20px;
+}
+
+.text-img-bkg h2{
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: 20px;
+}
+
+nav{
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 80px;
+}
+nav .navlogo img{
+    width: 190px;
+}
+.navbar{
+    display: flex;
+    gap: 40px;
+}
+.navbar ul{
+    list-style: none;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #191919;
+    font-size: 24px;
+    font-weight: 400;
+    transition: color 150ms ease-in-out;
+}
+
+.navbar ul li a:hover{
+    color: #EC3281;
+}
+.navbar ul li button{
+    text-decoration: none;
+    color: #191919;
+    font-size: 24px;
+    font-weight: 400;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 150ms ease-in-out;
+}
+
+.navbar ul li button:hover{
+    color:#EC3281;
+}
+.navbar input{
+    padding-left: 20px;
+    box-sizing: border-box;
+    width: 240px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 19px;
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: 92% 5px;
+    background-image: url('../images/lupa.png');
+    outline: 2px solid transparent;
+    transition: outline 300ms ease-in-out;
+}
+.navbar input:focus{
+    outline: 2px solid #242040;
+}
+.navline{
+    width: 100%;
+    height: 2px;
+    background-color: #dfdfdf;
+}
+
+.navlogo{
+    display: flex;
+    position: relative;
+
+}
+
+.line1{
+    background-color: #242040;
+    width: 85px;
+    height: 4px;
+    position: absolute;
+    left: -100px;
+    bottom : 0px;
+}
+
+.line2{
+    background-color: #EC3281;
+    width: 140px;
+    height: 3px;
+    position: absolute;
+    left: -100px;
+    bottom : -12px;
+}
+
+
+
+
+/* ================================================LOGIN FORM================================================ */
+.login{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    transition: all 300ms 300ms;
+}
+
+.login-img{
+    width: 40px;
+    margin: 0 auto;
+}
+
+.overlay-login{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #19191975;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.login-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 0;
+    background-color: #fff;
+    padding: 30px 30px 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px #000000c7;
+    transition: all 300ms ease-in-out;
+    gap: 15px
+}
+
+.login-content form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 260px;
+    position: relative;
+}
+
+.login-content form input{
+    padding: 6px 15px;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: 2px solid transparent;
+    transition: outline 300ms ease-in-out;
+}
+
+.login-content form input::placeholder{
+    color: #b8b8b8;
+}
+
+.login-content form input:focus{
+    outline: 2px solid #242040;
+}
+
+.login-content form button{
+    background-color: #242040;
+    padding: 6px;
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+}
+
+.login-content form button:hover{
+    background-color: #EC3281;
+}
+
+.additional-content{
+    display: flex;
+    justify-content:center;
+}
+
+.additional-content .cancel-btn{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: transparent;
+    background-image: url(../images/x.png);
+    background-size: cover;
+    height: 15px;
+    width: 15px;
+    border: 0;
+    color: #EC3281;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-image, opacity 200ms ease-in-out;
+}
+
+.additional-content .cancel-btn:hover{
+    background-image: url(../images/x-pink.png);
+}
+
+.additional-content .forgot-password{
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: -15px;
+}
+.additional-content .forgot-password a{
+    font-size: 13px;
+    text-decoration: underline;
+    transition: color 200ms ease-in-out;
+    font-weight: 300;
+}
+
+.additional-content .forgot-password a:hover{
+    font-size: 13px;
+    text-decoration: underline;
+    color:#EC3281
+}
+
+.login.active {
+    top: 0px;
+    z-index: 2;
+    transition: all 0ms ease-in-out;
+}
+
+.login.active .overlay-login{
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.login.active .login-content{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+/* ===================================================MAIN============================================== */
+main{
+    padding: 40px 180px 60px 180px;
+
+}
+
+main section{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+main h1{
+    padding-top: 5px;
+    font-size: 53px;
+    color: #191919;
+    font-weight: 300;
+    letter-spacing: 10px;
+}
+
+.carousel-container{
+    height: 365px;
+    width: 100%;
+    min-width: 500px;
+    margin: 25px 0px 25px 0px;
+    display: grid;
+    grid-template-columns: 18% 17% 30% 17% 18%;
+    grid-template-rows: 100%;
+    box-shadow: inset 0px -80px 40px 0px rgb(0 0 0 / 25%);
+    overflow: hidden;
+}
+
+.carousel-container .car-img img{
+    box-shadow: 0px 0px 10px #000000;
+}
+
+.carousel-container .car-img{
+    position: relative;
+
+}
+
+
+.carousel-img-3 img{
+    z-index: -2;
+}
+
+.carousel-img-4 img, .carousel-img-2 img{
+    z-index: -3;
+}
+
+.carousel-img-5 img, .carousel-img-1 img{
+    z-index: -4;
+}
+
+.carousel-container img{
+    object-fit: cover;
+    position: relative;
+    /* z-index: -1; */
+    width: 100%;
+    height: 100%;
+}
+.carroussel-txt{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+    gap: 2px;
+}
+
+.nomearte{
+    color: #f1f1f1;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.nomeartista{
+    color: #f1f1f1;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.visumais-btn{
+    padding: 5px 45px 5px 45px;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    background: #242040;
+    background: linear-gradient(to right, #242040 50%, #EC3281 50%) left;
+    background-size: 200%;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    color:#f1f1f1;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 6px;
+    position: relative;
+    transition: all 400ms ease-out;
+}
+
+.visumais-btn:hover{
+    /* background: linear-gradient(to right, #242040 0%, #EC3281 0% 100%); */
+    background-position: right;
+}
+
+.visumais-btn::before{
+    padding: 0px 10px 0px 10px;
+    object-fit: cover;
+    content: "";
+    bottom: 0px;
+    right: 0px;
+    height: 100%;
+    position: absolute;
+    background-color: #EC3281;
+    transition: all 200ms ease-in-out 4s;
+}
+
+.pag2{
+    padding: 110px 180px 110px 180px;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    background-color: #242040;
+    color: #f1f1f1;
+    position: relative;
+}
+
+.about-nft .title-about-nft{
+    position: absolute;
+    font-weight: 700;
+    font-size: 23px;
+    top: 40px;
+    padding: 5px 80px 5px 30px;
+    background-color: #EC3281;
+}
+
+.about-nft{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.leftside-nft{
+    width:50%;
+    height: 100%;
+    padding-right: 25px;
+    overflow: auto;
+}
+
+.leftside-nft h2{
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.leftside-nft h2 b{
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.leftside-nft h3{
+    font-size: 2.05vw;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 35px;
+}
+
+.leftside-nft h3 b{
+    font-size: 2.1vw;
+    font-weight: 700;
+    text-align: justify;
+    line-height: 35px;
+
+}
+.rightside-nft{
+    width: 50%;
+    position: relative;
+    gap: 20px;
+}
+
+.rightside-nft img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rightside-nft span{
+    display:flex;
+    flex-direction: column;
+}
+
+.text-about-nft{
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+}
+
+.title-about{
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.subtitle-about{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.detail-img{
+    background-color: #EC3281;
+    height: 100%;
+    width: 1%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pag3{
+    height: 100vh;
+    min-height: 600px;
+    max-height: 1000px;
+    color: #191919;
+    position: relative;
+}
+
+.pag3-gallery-padding{
+    padding: 60px 180px 0px 180px;
+    position: relative;
+    height: 95%;
+}
+
+.gallery-block{
+    /* border: 2px solid blue; */
+    height: 100%;
+}
+
+
+.title-gallery{
+    display: block;
+    text-align: center;
+    
+}
+
+.title-gallery span{
+    display: inline-block;
+    text-align: center;
+    font-weight: 300;
+    font-size: 50px;
+    letter-spacing: 20px;
+    position: relative;
+}
+
+.title-gallery-block-color{
+    background-color: #EC3281;
+    width: 492px;
+    height: 26px;
+    position: absolute;
+    right: 20px;
+    top: -13px;
+    overflow: hidden;
+}
+
+.title-gallery-block-color p{
+    font-weight: 300;
+    font-size: 50px;
+    letter-spacing: 20px;
+    color: white;
+    position: absolute;
+    margin-top: 16px;
+    margin-left: -2px;
+}
+/* ==================== GALERIA SUBTERRANEA ====================== */
+.gallery{
+    width: 100%;
+    height: 80%;
+    margin-top: 40px;
+    display: inline-block;
+}
+.gallery-grid{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-areas: 
+    "a a b c d d"
+    "e f g g d d"
+    "e h g g i i";
+    grid-gap: 2px;
+}
+
+.gallery-grid div{
+    background-color: black;
+}
+
+.gallery-grid img{
+    max-height: 100%;
+    min-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.gallery-block-1{
+    grid-area: a;
+    background-image: url('../images/imagens/pagina 3 galeria/galeria9.png');
+    background-size: cover;
+}
+
+.gallery-block-2{
+    grid-area: b;
+    background-image: url('../images/imagens/pagina 3 galeria/galeria8.png');
+    background-size: cover;
+}
+
+.gallery-block-3{
+    grid-area: c;
+    background-image: url('../images/imagens/pagina 3 galeria/galeria7.png');
+    background-size: cover;
+}
+
+.gallery-block-4{
+    grid-area: d;
+    background-image: url('../images/imagens/pagina 3 galeria/galeria6.png');
+    background-size: cover;
+}
+
+.gallery-block-5{
+    grid-area: e;
+    background-image: url('../images/imagens/pagina 3 galeria/galeria4.png');
+    background-size: cover;
+}
+
+.gallery-block-6{
+    grid-area: f;
+    background-image: url('../images/imagens/pagina 3 galeria/galeria2.png');
+    background-size: cover;
+}
+
+.gallery-block-7{
+    grid-area: g;
+    background-image: url('../images/imagens/pagina 3 galeria/galeria5.png');
+    background-size: cover;
+    background-position-y: 33%;
+}
+
+.gallery-block-8{
+    grid-area: h;
+    background-image: url('../images/imagens/pagina 3 galeria/galeria3.png');
+    background-size: cover;
+    background-position-y: 20%;
+}
+
+.gallery-block-9{
+    grid-area: i;
+    background-image: url('../images/imagens/pagina 3 galeria/galeria1.png');
+    background-size: cover;
+}
+
+
+footer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+}
+
+footer span{
+    font-size: 19px;
+    font-weight: 100;
+}
+
+footer a{
+    font-size: 19px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+footer .leftinfo-footer{
+    display: flex;
+    gap: 40px;
+}
+
+footer .rightinfo-footer{
+    display: flex;
+}
+
+.footer-line{
+    width: 100%;
+    height: 2px;
+    background-color: #dfdfdf;
+}
